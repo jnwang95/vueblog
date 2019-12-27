@@ -32,9 +32,17 @@ import {
   TableColumn,
   Tabs,
   TabPane,
-  Tree
+  Tree,
+  Dialog,
+  Badge,
+  Tag,
+  Image
 } from 'element-ui'
 
+Vue.use(Image)
+Vue.use(Tag)
+Vue.use(Badge)
+Vue.use(Dialog)
 Vue.use(Tree)
 Vue.use(Tabs)
 Vue.use(TabPane)

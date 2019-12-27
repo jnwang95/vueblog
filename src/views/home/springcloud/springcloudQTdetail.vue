@@ -2,7 +2,7 @@
   <div class="reader">
     <div class="goback">
       <el-page-header @back="goBack"
-                      title="返回">
+                      title="目录">
       </el-page-header>
     </div>
     <h1 v-text="title"></h1>
@@ -34,7 +34,7 @@ export default {
   methods: {
     async detail () {
       this.id = this.$route.params.id
-      const { data: res } = await this.$axios.get('article/articleBlogDetail/' + this.id)
+      const { data: res } = await this.$axios.get('springcloud/getSpringCloudQTdetail/' + this.id)
       if (res.code === 200) {
         this.content = res.data.content
         this.title = res.data.title

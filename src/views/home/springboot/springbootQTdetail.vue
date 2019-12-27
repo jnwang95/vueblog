@@ -41,7 +41,7 @@ export default {
       }
     },
     goBack () {
-      this.$router.push({ path: '/springbootQT' })
+      this.$router.go(-1)
     }
   }
 }

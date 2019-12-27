@@ -15,12 +15,15 @@ import TimeLineBlogDetail from '../views/home/blog/timeLineBlogDetail.vue'
 import SpringbootGithub from '../views/home/springboot/springbootGithub.vue'
 import SpringbootGitee from '../views/home/springboot/springbootGitee.vue'
 import SpringbootThird from '../views/home/springboot/springbootThird.vue'
+import SpringcloudQT from '../views/home/springcloud/springcloudQT.vue'
+import SpringcloudQTdetail from '../views/home/springcloud/springcloudQTdetail.vue'
+import SpringcloudGithub from '../views/home/springcloud/springcloudGithub.vue'
+import SpringcloudGitee from '../views/home/springcloud/springcloudGitee.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   { path: '/', redirect: '/index' },
-  { path: '/articledetail', component: Articledetail },
   {
     path: '/index',
     component: index,
@@ -35,7 +38,13 @@ const routes = [
       },
       { path: '/springboot', component: Springboot },
       { path: '/springcloud', component: Springcloud },
-      { path: '/article', component: Article },
+      {
+        path: '/article',
+        component: Article,
+        meta: {
+          keepAlive: true
+        }
+      },
       {
         path: '/timeline',
         component: Timeline,
@@ -44,12 +53,29 @@ const routes = [
         }
       },
       { path: '/webpage', component: Webpage },
-      { path: '/springbootQT', component: SpringbootQT },
+      {
+        path: '/springbootQT',
+        component: SpringbootQT,
+        meta: {
+          keepAlive: true
+        }
+      },
       { path: '/springbootQTdetail/:id', component: SpringbootQTdetail },
       { path: '/blogdetail/:id', component: BlogDetail },
       { path: '/timeLineBlogDetail/:id', component: TimeLineBlogDetail },
       { path: '/springbootGithub', component: SpringbootGithub },
-      { path: '/springbootGitee', component: SpringbootGitee }
+      { path: '/springbootGitee', component: SpringbootGitee },
+      { path: '/articledetail/:id', component: Articledetail },
+      {
+        path: '/springcloudQT',
+        component: SpringcloudQT,
+        meta: {
+          keepAlive: true
+        }
+      },
+      { path: '/springcloudQTdetail/:id', component: SpringcloudQTdetail },
+      { path: '/springcloudGithub', component: SpringcloudGithub },
+      { path: '/springcloudGitee', component: SpringcloudGitee }
     ]
   },
   { path: '/springbootThird', component: SpringbootThird }
